@@ -223,7 +223,7 @@ if page_choice == "Explorer":
 
                 # Original code (""")
                 for group_name, leagues in league_groups.items():
-                    st.text(f"Group: {group_name} / League: {leagues}")
+                    #st.text(f"Group: {group_name} / League: {leagues}")
                     #comp_group_df = df_all_leagues[df_all_leagues["League"].isin(leagues) & (df_all_leagues["Player"] != player_choice)]
                     comp_group_df = df_all_leagues[df_all_leagues["League"].isin(leagues)]
                     
@@ -241,9 +241,9 @@ if page_choice == "Explorer":
                     # Selected vector
                     selected_vec = sel_player_df[radar_features].values
                     
-                    st.text(f"[DEBUG] Comparing {player_choice} against {group_name}")
-                    st.text(f"Player vector shape: {selected_vec.shape}")
-                    st.text(f"Comparison group shape: {comp_group_df.shape}")
+                    #st.text(f"[DEBUG] Comparing {player_choice} against {group_name}")
+                    #st.text(f"Player vector shape: {selected_vec.shape}")
+                    #st.text(f"Comparison group shape: {comp_group_df.shape}")
                     
                     top_similar = get_top_similar_players(selected_vec, comp_group_df, radar_features, player_choice, top_n=3)
 
